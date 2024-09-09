@@ -5,6 +5,7 @@ import { usuarioParser } from '../middlewares/usuario-middleware.js';
 const router = express.Router();
 
 router.get('/', controller.RetornarTodosUsuarios);
+router.get('/:codigo', controller.RetornarUsuarioPorCodigo);
 router.post('/', usuarioParser, controller.AdicionarUsuario);
 router.put('/', usuarioParser, controller.AtualizarUsuario);
 router.delete('/:codigo', controller.RemoverUsuario);
